@@ -33,6 +33,8 @@ int FuzzerEntrypoint(const uint8_t *Data, size_t Size) {
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
+
+You can use [assert](https://en.cppreference.com/w/cpp/error/assert) to check for errors as you would in a unit test - Fuzzbuzz will pick up failed assertions as bugs.
 {% endtab %}
 
 {% tab title="C++" %}
@@ -51,6 +53,8 @@ extern "C" int FuzzerEntrypoint(const uint8_t *Data, size_t Size) {
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
+
+You can use [assert](https://en.cppreference.com/w/cpp/error/assert) to check for errors as you would in a unit test - Fuzzbuzz will pick up failed assertions as bugs.
 {% endtab %}
 
 {% tab title="Go" %}
@@ -68,6 +72,26 @@ func FuzzerEntrypoint(Data []byte) int {
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
+
+Use panics to alert on bugs - Fuzzbuzz will pick up these failures.
+{% endtab %}
+
+{% tab title="Python" %}
+To fuzz code written in Python, include the following method in your package:
+
+{% code-tabs %}
+{% code-tabs-item title="target.go" %}
+```python
+def FuzzerEntrypoint(Data): # bytes
+  # Step 1: read Data into desired format
+  # Step 2: run your methods/code with the test data
+  # Step 3: check for errors, and abort if errors are found 
+  # return -1 if the Data is irrelevant or invalid
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+You can use Python's [assert statement](https://wiki.python.org/moin/UsingAssertionsEffectively) to check for errors as you would in a unit test - Fuzzbuzz will pick up these failures.
 {% endtab %}
 
 {% tab title="Binaries" %}
@@ -222,6 +246,32 @@ targets:
         # package specifies the package to import the
         # desired function from 
         package: github.com/x/y/z/a/b/c
+
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+{% endtab %}
+
+{% tab title="Python" %}
+To fuzz Python code, use the `setup` steps to install all the needed dependencies. Use the `file` field to specify the Python file that contains the test harness. Then, specify the function to fuzz in the `function` field.
+
+This is an example of the configuration of a target written in Go:
+
+{% code-tabs %}
+{% code-tabs-item title="fuzz.yaml" %}
+```yaml
+# ---- base, global setup, and global environment omitted
+language: python
+version: "3.6"
+setup:
+  - pip3 install -r requirements.txt
+targets:
+    - name: my-target
+      harness:
+        # Python targets are flexible - your method doesn't need to
+        # be named FuzzerEntrypoint
+        function: FuzzerEntrypoint
+        file: tests/fuzz_test_file.py
 
 ```
 {% endcode-tabs-item %}
