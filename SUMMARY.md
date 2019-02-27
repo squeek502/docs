@@ -33,7 +33,6 @@
 ## Platform
 
 * [Overview](platform/overview.md)
-* [Deep Dive](platform/deep-dive.md)
 
 ## Reference
 

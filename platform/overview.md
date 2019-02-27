@@ -1,9 +1,5 @@
 # Overview
 
-{% hint style="info" %}
-This page gives you a high-level overview of Fuzzbuzz's features. For more in-depth technical details, check out the [Platform Deep Dive](deep-dive.md).
-{% endhint %}
-
 ### Integrates into your DevOps Pipeline
 
 Fuzzbuzz integrates with source-control and CI tools like GitHub, Jenkins and CircleCI, to ensure that the latest version of your code is always being tested. Whenever code is updated, Fuzzbuzz automatically checks to see if bugs have been fixed, so developers don't have to spend time closing out bug reports.
