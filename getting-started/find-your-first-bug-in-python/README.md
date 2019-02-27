@@ -12,7 +12,7 @@ description: >-
 First, clone the tutorial code to your machine:
 
 ```bash
-git clone https://github.com/fuzzbuzz/tutorial-c.git
+git clone https://github.com/fuzzbuzz/tutorial-python.git
 ```
 
 ## Step 2: Code Review
