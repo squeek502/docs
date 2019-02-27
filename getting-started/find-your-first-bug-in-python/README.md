@@ -1,3 +1,10 @@
+---
+description: >-
+  This Getting Started guide will walk you through an end-to-end demo of the
+  Fuzzbuzz platform, from setting up a project, all the way to finding and
+  fixing a bug.
+---
+
 # Find your first bug in Python
 
 ## Step 1: Get the code
@@ -16,7 +23,7 @@ The repository contains a `fuzz.yaml` file, which is how Fuzzbuzz is configured,
 
 This file contains the method we want to test, `BrokenMethod`. It has a very basic bug that serves our purpose of demonstrating how the platform works.
 
-It also contains `FuzzerEntrypoint`, the method that Fuzzbuzz will run repeatedly with the tests it generates. This method is very simple, as it just converts the bytes it receives to a string, and passes them to `BrokenMethod`. To learn how to write more advanced tests, read our [Target Documentation ](../developer-documentation/targets.md)page.
+It also contains `FuzzerEntrypoint`, the method that Fuzzbuzz will run repeatedly with the tests it generates. This method is very simple, as it just converts the bytes it receives to a string, and passes them to `BrokenMethod`. To learn how to write more advanced tests, read our [Target Documentation ](../../developer-documentation/targets.md)page.
 
 {% tabs %}
 {% tab title="Python 2" %}
@@ -76,7 +83,7 @@ targets:
 
 This `fuzz.yaml` is very basic. It defines the base operating system to build and fuzz code in, and has configuration for a target named `tutorial`. Every target has a corresponding method or binary that it represents.
 
-The target configuration defines the language and version to use, as well as the method to test, where to find and import it, and the initial test corpus. You can learn more about other configuration options by reading the [Target Documentation ](../developer-documentation/targets.md)page.
+The target configuration defines the language and version to use, as well as the method to test, where to find and import it, and the initial test corpus. You can learn more about other configuration options by reading the [Target Documentation ](../../developer-documentation/targets.md)page.
 
 You're all set! Head to the next page to set up the Fuzzbuzz tools.
 

@@ -9,10 +9,6 @@ description: >-
 
 ## Step 3: Sign up for Fuzzbuzz
 
-{% hint style="info" %}
-We're currently in closed beta, so you won't be able to create an account for yourself. Want access? Shoot us an email at [contact@fuzzbuzz.io](mailto:contact@fuzzbuzz.io)!
-{% endhint %}
-
 Head to [https://app.fuzzbuzz.io/](https://app.fuzzbuzz.io) and follow the instructions to sign up. Once you see this page, you're all set!
 
 ![](../../.gitbook/assets/screen-shot-2019-02-06-at-2.11.35-pm.png)

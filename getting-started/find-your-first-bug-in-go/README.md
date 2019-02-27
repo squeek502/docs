@@ -9,10 +9,6 @@ description: >-
 
 ## Step 1: Get the code
 
-{% hint style="info" %}
-We're currently in closed beta, so you can read along with this guide, but you won't be able to create an account for yourself. Want access? Shoot us an email at [contact@fuzzbuzz.io](mailto:contact@fuzzbuzz.io)!
-{% endhint %}
-
 First, clone the tutorial code to your machine:
 
 ```bash
