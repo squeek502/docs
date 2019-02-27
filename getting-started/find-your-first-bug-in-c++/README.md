@@ -24,7 +24,7 @@ The repository contains a `fuzz.yaml` file, which is how Fuzzbuzz is configured,
 This file contains the method we want to test. It has a very basic bug that serves our purpose of demonstrating how the platform works.
 
 {% code-tabs %}
-{% code-tabs-item title="method.go" %}
+{% code-tabs-item title="api.cpp" %}
 ```go
 #include "api.h"
 
@@ -56,7 +56,7 @@ size_t BrokenMethod(const std::string &str) {
 This file contains `FuzzerEntrypoint`, the method that Fuzzbuzz will run repeatedly with the tests it generates. This method is very simple, as it just passes the raw test data through to `BrokenMethod`. To learn how to write more advanced tests, read our [Target Documentation ](../../developer-documentation/targets.md)page.
 
 {% code-tabs %}
-{% code-tabs-item title="fuzz.go" %}
+{% code-tabs-item title="harness.cpp" %}
 ```go
 #include "api.h"
 
