@@ -8,13 +8,13 @@ This page gives you a high-level overview of Fuzzbuzz's features. For more in-de
 
 Fuzzbuzz integrates with source-control and CI tools like GitHub, Jenkins and CircleCI, to ensure that the latest version of your code is always being tested. Whenever code is updated, Fuzzbuzz automatically checks to see if bugs have been fixed, so developers don't have to spend time closing out bug reports.
 
-In addition, Fuzzbuzz plays nicely with existing open-source fuzzing tools: if your code already works with AFL, Gofuzz, Libfuzzer, or other popular frameworks, it takes less than 10 minutes to get set up. [Learn How.](../documentation/porting-targets-to-fuzzbuzz/)
+In addition, Fuzzbuzz plays nicely with existing open-source fuzzing tools: if your code already works with AFL, Gofuzz, Libfuzzer, or other popular frameworks, it takes less than 10 minutes to get set up. [Learn How.](../developer-documentation/porting-targets-to-fuzzbuzz/)
 
 ### Simple, flexible test framework
 
 Fuzzbuzz generates the tests, so developers don't have to spend their time dreaming up edge cases. The flexible interface allows developers to write a wide variety of tests that can all take advantage of Fuzzbuzz's platform. Additionally, Fuzzbuzz uses a modified version of the [open-source fuzzer AFL](http://lcamtuf.coredump.cx/afl/)'s algorithm, which has a [proven track record](http://lcamtuf.coredump.cx/afl/#bugs) of funding hundreds of bugs and vulnerabilities.
 
-[Click Here](../documentation/targets.md) to learn how Fuzzbuzz's API makes it simple to write robust, flexible automated tests.
+[Click Here](../developer-documentation/targets.md) to learn how Fuzzbuzz's API makes it simple to write robust, flexible automated tests.
 
 ### Code Coverage Information
 

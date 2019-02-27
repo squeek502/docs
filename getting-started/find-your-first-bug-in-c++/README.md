@@ -7,6 +7,8 @@ description: >-
 
 # Find your first bug in C++
 
+
+
 ## Step 1: Get the code
 
 {% hint style="info" %}
@@ -57,7 +59,7 @@ size_t BrokenMethod(const std::string &str) {
 
 ### harness.cpp
 
-This file contains `FuzzerEntrypoint`, the method that Fuzzbuzz will run repeatedly with the tests it generates. This method is very simple, as it just passes the raw test data through to `BrokenMethod`. To learn how to write more advanced tests, read our [Target Documentation ](../../documentation/targets.md)page.
+This file contains `FuzzerEntrypoint`, the method that Fuzzbuzz will run repeatedly with the tests it generates. This method is very simple, as it just passes the raw test data through to `BrokenMethod`. To learn how to write more advanced tests, read our [Target Documentation ](../../developer-documentation/targets.md)page.
 
 {% code-tabs %}
 {% code-tabs-item title="fuzz.go" %}
@@ -107,7 +109,7 @@ targets:
 
 This `fuzz.yaml` is very basic. It defines the base operating system to build and fuzz code in, and has configuration for a target named `tutorial`. Every target has a corresponding method or binary that it represents.
 
-The target configuration defines the language and version to use, as well as the method to test, where to find and import it, and the initial test corpus. You can learn more about other configuration options by reading the [Target Documentation ](../../documentation/targets.md)page.
+The target configuration defines the language and version to use, as well as the method to test, where to find and import it, and the initial test corpus. You can learn more about other configuration options by reading the [Target Documentation ](../../developer-documentation/targets.md)page.
 
 You're all set! Head to the next page to set up the Fuzzbuzz tools.
 
