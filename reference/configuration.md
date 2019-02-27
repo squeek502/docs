@@ -8,11 +8,11 @@ The following sections describe each field allowed in a `fuzz.yaml` configuratio
 
 ### base
 
-**Type: `string`**
+**Type:** `string`
 
 **Required: yes**
 
-**Valid values: `ubuntu:16.04`**
+**Valid values:** `ubuntu:16.04`
 
 The name of the operating system to use as the base of the Docker image the target is set up and fuzzed in. As of now, `ubuntu:16.04` is the only option.
 
@@ -28,7 +28,7 @@ base: ubuntu:16.04
 
 ### environment
 
-**Type: `Array`**
+**Type:** `Array`
 
 **Required: no**
 
@@ -48,7 +48,7 @@ environment:
 
 ### setup
 
-**Type: `Array`**
+**Type:** `Array`
 
 **Required: no**
 
@@ -68,11 +68,11 @@ setup:
 
 ### language
 
-**Type: `string`**
+**Type:** `string`
 
 **Required: yes**
 
-**Valid values: `c, c++, go`**
+**Valid values:** `c, c++, go`
 
 The name of the language the target was written in. This must be specified either here, or in `target.language`. If it is specified in both, the value in `target.language` overrides the one here.
 
@@ -88,7 +88,7 @@ language: c++
 
 ### version
 
-**Type: `string`**
+**Type:** `string`
 
 **Required: yes \(all languages except C/C++\)**
 
@@ -107,7 +107,7 @@ version: "1.11"
 
 ### checkout
 
-**Type: `string`**
+**Type:** `string`
 
 **Required: yes \(Golang only\)**
 
@@ -128,7 +128,7 @@ checkout: github.com/x/y
 
 ### targets
 
-**Type: `Array`**
+**Type:** `Array`
 
 **Required: yes**
 
@@ -148,7 +148,7 @@ targets:
 
 ### target.name
 
-**Type: `string`**
+**Type:** `string`
 
 **Required: yes**
 
@@ -167,11 +167,11 @@ targets:
 
 ### target.language
 
-**Type: `string`**
+**Type:** `string`
 
 **Required: yes**
 
-**Valid values: `c, c++, go`**
+**Valid values:** `c, c++, go`
 
 The name of the language the target was written in.
 
@@ -189,7 +189,7 @@ targets:
 
 ### target.version
 
-**Type: `string`**
+**Type:** `string`
 
 **Required: yes \(all languages except C/C++\)**
 
@@ -210,7 +210,7 @@ targets:
 
 ### target.environment
 
-**Type: `Array`**
+**Type:** `Array`
 
 **Required: no**
 
@@ -232,7 +232,7 @@ targets:
 
 ### target.setup
 
-**Type: `Array`**
+**Type:** `Array`
 
 **Required: no**
 
@@ -254,7 +254,7 @@ targets:
 
 ### target.corpus
 
-**Type: `string`**
+**Type:** `string`
 
 **Required: yes**
 
@@ -274,7 +274,7 @@ targets:
 
 ### target.harness
 
-**Type: `Map`**
+**Type:** `Map`
 
 **Required: yes**
 
@@ -339,7 +339,7 @@ targets:
 {% endtab %}
 
 {% tab title="Binaries" %}
-Harness specifies the location of the final compiled binary, as well as how the binary receives input. 
+Harness specifies the location of the final compiled binary, as well as how the binary receives input.
 
 If the binary takes input from a file, mark the location in the binary's command line where the input file should be placed with a `@@`. This will be replaced automatically when fuzzing.
 
@@ -365,7 +365,7 @@ The `socket` input mode is coming soon, and is not currently available on the pl
 
 ### target.memory\_limit
 
-**Type: `integer`**
+**Type:** `integer`
 
 **Required: no**
 
@@ -385,7 +385,7 @@ targets:
 
 ### target.timeout
 
-**Type: `integer`**
+**Type:** `integer`
 
 **Required: no**
 
@@ -409,11 +409,11 @@ targets:
 This field is only valid for targets written in or compiled from C and C++.
 {% endhint %}
 
-**Type: `Map`**
+**Type:** `Map`
 
 **Required: no**
 
-**Valid values: `address`**
+**Valid values:** `address`
 
 Sanitizers to use with this target. Sanitizers are analyzers that are compiled along with the target, and alert on specific issues.
 
@@ -432,7 +432,7 @@ targets:
         # sanitizer options can be specified as a string
         address: detect_stack_use_after_return=1:debug=1
         # the field can also be left blank, e.g.:
-        address: 
+        address:
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}

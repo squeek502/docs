@@ -14,5 +14,5 @@ To learn more about fuzzing, and about how Fuzzbuzz makes it really simple, chec
 
 Or, if you know what you're doing and just want to start fuzzing your code, jump right into our developer documentation:
 
-{% page-ref page="documentation/basics.md" %}
+{% page-ref page="developer-documentation/basics.md" %}
 

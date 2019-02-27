@@ -17,14 +17,14 @@
 
 ## Developer Documentation
 
-* [Basics](documentation/basics.md)
-* [Projects](documentation/projects.md)
-* [Targets](documentation/targets.md)
-* [Running Fuzzing Jobs](documentation/fuzzing-jobs.md)
-* [Porting targets to Fuzzbuzz](documentation/porting-targets-to-fuzzbuzz/README.md)
-  * [AFL Targets](documentation/porting-targets-to-fuzzbuzz/afl-targets.md)
-  * [Libfuzzer Targets](documentation/porting-targets-to-fuzzbuzz/libfuzzer-targets.md)
-  * [Go-fuzz targets](documentation/porting-targets-to-fuzzbuzz/go-fuzz-targets.md)
+* [Basics](developer-documentation/basics.md)
+* [Projects](developer-documentation/projects.md)
+* [Targets](developer-documentation/targets.md)
+* [Running Fuzzing Jobs](developer-documentation/fuzzing-jobs.md)
+* [Porting targets to Fuzzbuzz](developer-documentation/porting-targets-to-fuzzbuzz/README.md)
+  * [AFL Targets](developer-documentation/porting-targets-to-fuzzbuzz/afl-targets.md)
+  * [Libfuzzer Targets](developer-documentation/porting-targets-to-fuzzbuzz/libfuzzer-targets.md)
+  * [Go-fuzz targets](developer-documentation/porting-targets-to-fuzzbuzz/go-fuzz-targets.md)
 
 ## Platform
 

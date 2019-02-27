@@ -35,11 +35,11 @@ package tutorial
 // BrokenMethod has a bug - it will try to read the 4th
 // index of Data even when it only has a length of 3.
 func BrokenMethod(Data string) bool {
-	return len(Data) >= 3 &&
-		Data[0] == 'F' &&
-		Data[1] == 'U' &&
-		Data[2] == 'Z' &&
-		Data[3] == 'Z'
+    return len(Data) >= 3 &&
+        Data[0] == 'F' &&
+        Data[1] == 'U' &&
+        Data[2] == 'Z' &&
+        Data[3] == 'Z'
 }
 ```
 {% endcode-tabs-item %}
@@ -47,7 +47,7 @@ func BrokenMethod(Data string) bool {
 
 ### fuzz.go
 
-This file contains `FuzzerEntrypoint`, the method that Fuzzbuzz will run repeatedly with the tests it generates. This method is very simple, as it just passes the raw test data through to `BrokenMethod`. To learn how to write more advanced tests, read our [Target Documentation ](../../documentation/targets.md)page.
+This file contains `FuzzerEntrypoint`, the method that Fuzzbuzz will run repeatedly with the tests it generates. This method is very simple, as it just passes the raw test data through to `BrokenMethod`. To learn how to write more advanced tests, read our [Target Documentation ](../../developer-documentation/targets.md)page.
 
 {% code-tabs %}
 {% code-tabs-item title="fuzz.go" %}
@@ -57,9 +57,9 @@ package tutorial
 // FuzzerEntrypoint is the method Fuzzbuzz will repeatedly
 // run with new tests to try and find bugs in BrokenMethod
 func FuzzerEntrypoint(Data []byte) int {
-	testData := string(Data)
-	BrokenMethod(testData)
-	return 0
+    testData := string(Data)
+    BrokenMethod(testData)
+    return 0
 }
 ```
 {% endcode-tabs-item %}
@@ -89,14 +89,13 @@ targets:
       # the repository will be cloned to
       # $GOPATH/src/github.com/fuzzbuzz/tutorial
       checkout: github.com/fuzzbuzz/tutorial
-
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
 This `fuzz.yaml` is very basic. It defines the base operating system to build and fuzz code in, and has configuration for a target named `tutorial`. Every target has a corresponding method or binary that it represents.
 
-The target configuration defines the language and version to use, as well as the method to test, where to find and import it, and the initial test corpus. You can learn more about other configuration options by reading the [Target Documentation ](../../documentation/targets.md)page.
+The target configuration defines the language and version to use, as well as the method to test, where to find and import it, and the initial test corpus. You can learn more about other configuration options by reading the [Target Documentation ](../../developer-documentation/targets.md)page.
 
 You're all set! Head to the next page to set up the Fuzzbuzz tools.
 
