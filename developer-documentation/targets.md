@@ -82,7 +82,7 @@ To fuzz code written in Python, include the following method in your package:
 {% code-tabs %}
 {% code-tabs-item title="target.go" %}
 ```python
-def FuzzerEntrypoint(Data): # bytes
+def FuzzerEntrypoint(Data): # Data is a buffer of bytes
   # Step 1: read Data into desired format
   # Step 2: run your methods/code with the test data
   # Step 3: check for errors, and abort if errors are found 

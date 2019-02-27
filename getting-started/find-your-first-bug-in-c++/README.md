@@ -7,8 +7,6 @@ description: >-
 
 # Find your first bug in C++
 
-
-
 ## Step 1: Get the code
 
 {% hint style="info" %}

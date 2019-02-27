@@ -23,15 +23,15 @@ Fuzzbuzz provides a CLI that makes it easy to build & test your targets locally 
 
 {% tabs %}
 {% tab title="Mac OSX" %}
-Use the following command to download the CLI, and then save it somewhere in your path.
+Use the following command to download the CLI, and then give it the right permissions and save it somewhere in your path.
 
 ```bash
-wget https://app.fuzzbuzz.io/releases/cli/0.0.1/osx/fuzzbuzz
+curl -O https://app.fuzzbuzz.io/releases/cli/0.0.1/osx/fuzzbuzz
 ```
 {% endtab %}
 
 {% tab title="Linux" %}
-Use the following command to download the CLI, and then save it somewhere in your path.
+Use the following command to download the CLI, and then give it the right permissions and save it somewhere in your path.
 
 ```bash
 wget https://app.fuzzbuzz.io/releases/cli/0.0.1/osx/fuzzbuzz
