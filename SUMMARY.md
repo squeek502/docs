@@ -14,6 +14,7 @@
   * [Installation & Setup](getting-started/find-your-first-bug-in-go/installation.md)
   * [Catching Bugs](getting-started/find-your-first-bug-in-go/find-your-first-bug.md)
   * [Fixing Bugs](getting-started/find-your-first-bug-in-go/fixing-bugs.md)
+* [Find your first bug in Python](getting-started/find-your-first-bug-in-python.md)
 
 ## Tutorials
 
